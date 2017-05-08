@@ -64,6 +64,7 @@ Severity: EASY
         </module>
         <module name="JavadocStyle">
             <property name="checkEmptyJavadoc" value="true" />
+            <property name="severity" value="ignore" />
         </module>
 
         <!-- Checks for Naming Conventions.                  -->
@@ -71,16 +72,16 @@ Severity: EASY
         <module name="ConstantName" />
         <module name="LocalFinalVariableName" />
         <module name="LocalVariableName" />
-        <module name="MemberName" />
-        <module name="MethodName">
-            <property name="severity" value="ignore" />
+        <module name="MemberName">
+            <property name="format" value="^m[A-Z][a-zA-Z0-9]*$" />
         </module>
+        <module name="MethodName" />
+        <module name="MethodTypeParameterName" />
         <module name="PackageName" />
         <module name="ParameterName">
-            <property name="severity" value="ignore" />
         </module>
         <module name="StaticVariableName">
-            <property name="severity" value="ignore" />
+            <property name="format" value="^[A-Z]+[_A-Z]*[^_]$" />
         </module>
         <module name="TypeName" />
 
@@ -175,6 +176,8 @@ Severity: EASY
         </module>
         <module name="SimplifyBooleanExpression" />
         <module name="SimplifyBooleanReturn" />
+        <module name="OverloadMethodsDeclarationOrder" />
+        <module name="DeclarationOrder" />
 
         <!-- Checks for class design                         -->
         <!-- See http://checkstyle.sourceforge.net/config_design.html -->
